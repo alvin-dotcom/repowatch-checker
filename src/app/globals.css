@@ -1,0 +1,111 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 203 71% 95%; /* #EBF5FB Light Desaturated Blue */
+    --foreground: 220 15% 20%; /* Darker gray for better readability on light blue */
+
+    --card: 0 0% 100%; /* White cards */
+    --card-foreground: 220 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 20%;
+
+    --primary: 207 99% 58%; /* #2E9AFE Vibrant Blue */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
+
+    --secondary: 207 90% 85%; /* Lighter shade of primary */
+    --secondary-foreground: 207 99% 30%; /* Darker shade of primary for text on secondary */
+
+    --muted: 203 60% 90%; /* Slightly muted version of background */
+    --muted-foreground: 203 30% 50%; /* Muted text color */
+
+    --accent: 47 100% 70%; /* #FFDA63 Warm Yellow */
+    --accent-foreground: 47 60% 15%; /* Dark brown/black for text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 203 50% 88%; /* Border derived from background */
+    --input: 0 0% 100%; /* White input background */
+    --ring: 207 99% 58%; /* Ring color same as primary */
+
+    --radius: 0.5rem;
+    
+    /* Default sidebar vars, can be customized if sidebar is used */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 207 50% 12%; /* Dark Blue */
+    --foreground: 203 71% 90%; /* Light Blue Text */
+
+    --card: 207 50% 18%; /* Darker card */
+    --card-foreground: 203 71% 90%;
+
+    --popover: 207 50% 18%;
+    --popover-foreground: 203 71% 90%;
+
+    --primary: 207 99% 65%; /* Lighter primary for dark mode */
+    --primary-foreground: 207 50% 10%; /* Dark text on primary */
+
+    --secondary: 207 50% 30%;
+    --secondary-foreground: 203 71% 90%;
+
+    --muted: 207 50% 25%;
+    --muted-foreground: 203 71% 70%;
+
+    --accent: 47 100% 75%; /* Lighter accent for dark mode */
+    --accent-foreground: 47 50% 10%; /* Dark text on accent */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 207 50% 35%;
+    --input: 207 50% 28%; /* Darker input for dark mode */
+    --ring: 207 99% 65%;
+        
+    /* Default sidebar vars for dark mode, can be customized */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
